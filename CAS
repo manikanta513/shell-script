@@ -1,0 +1,63 @@
+#!/bin/bash
+
+CAS_DIR=/endeca/CAS/11.2.0/bin
+CAS_USER=endadm
+
+start()
+{
+ps -ef | grep cas | grep -v grep  &>/dev/null
+
+if [ $? -eq 0 ]; then 
+ echo "CAS service is already running"
+ exit
+fi
+su - $CAS_USER -c "nohup /endeca/CAS/11.2.0/bin/cas-service.sh &>> /endeca/CAS/11.2.0/bin/cas.log &"
+}
+
+
+stop()
+{
+ps -ef | grep cas | grep -v grep  &>/dev/null
+if [ $? -ne 0 ]; then 
+ echo "CAS service is already stopped"
+ exit
+fi
+ps -ef | grep cas | grep -v grep | awk '{print $2}' | xargs kill
+if [ $? -eq 0 ]; then
+echo "CAS service stopped successfully"
+else
+echo " CAS service is not stopped properly please check in the server"
+fi
+
+}
+
+status()
+{
+ps -ef | grep cas | grep -v grep &>/dev/null
+if [ $? -eq 0 ]; then
+echo "CAS service is running"
+else 
+echo "CAS service is not running"
+fi
+}
+
+
+
+case $1 in 
+ start)
+  start
+  ;;
+ stop)
+  stop
+  ;;
+ status)
+  status
+  ;;
+ restart)
+  stop
+  sleep 30
+  start
+  ;;
+  *)
+  echo "please pass parameter like start, stop, restart, status"
+esac
