@@ -1,2 +1,2 @@
 #!/bin/bash
-diff -h $1 $2
+diff -h $1 $2 > /tmp/comapre
