@@ -2,7 +2,7 @@
 validate()
 {
     for i in `cat /tmp/output.txt`
-    echo $i | awk -F "" 
+    echo $i | awk -F "" '{print '
 }
 status_check()
 {
