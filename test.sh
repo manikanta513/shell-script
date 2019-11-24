@@ -1,5 +1,8 @@
 #!/bin/bash/
-validate(*)
+validate()
+{
+    
+}
 status_check()
 {
 touch output.txt
