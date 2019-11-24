@@ -19,4 +19,6 @@ touch /tmp/output.txt
 validate
 }
 
+
+
 status_check
