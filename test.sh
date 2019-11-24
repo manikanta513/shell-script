@@ -1,7 +1,8 @@
 #!/bin/bash/
 validate()
 {
-    for i in `cat /tmp/output`
+    for i in `cat /tmp/output.txt`
+    
 }
 status_check()
 {
