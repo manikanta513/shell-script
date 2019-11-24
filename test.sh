@@ -10,7 +10,6 @@ validate()
     echo $i
     exit 1
     fi
-     
 }
 status_check()
 {
