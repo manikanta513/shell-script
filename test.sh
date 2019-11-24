@@ -7,7 +7,9 @@ validate()
     then
     echo $i
     else
-    echo 
+    echo $i
+    exit 1
+    fi
      
 }
 status_check()
