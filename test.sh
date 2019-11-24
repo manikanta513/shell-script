@@ -1,7 +1,7 @@
 #!/bin/bash/
 validate()
 {
-    for i in `cat /tmp/output.txt` do
+    for i in `cat /tmp/output.txt`; do
     j=$(echo $i | awk -F "" '{print $3}')
     if [ $j == "running" ]
     then
