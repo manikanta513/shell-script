@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 validate()
 {
     for i in `cat /tmp/output.txt`; do
