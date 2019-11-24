@@ -18,3 +18,5 @@ touch /tmp/output.txt
 /opt/lucidworks/fusion/3.1.3/bin/fusion status >> output.txt
 validate
 }
+
+status_check
