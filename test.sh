@@ -3,6 +3,7 @@ validate()
 {
     for i in `cat /tmp/output.txt`
     j=`echo $i | awk -F "" '{print $3}'
+    if (j)
 }
 status_check()
 {
