@@ -2,7 +2,7 @@
 validate()
 {
     for i in `cat /tmp/output.txt`
-    
+    echo 
 }
 status_check()
 {
