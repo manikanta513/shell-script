@@ -4,7 +4,9 @@ validate()
     for i in `cat /tmp/output.txt`
     j=`echo $i | awk -F "" '{print $3}'
     if [ $j == "running" ]
-    t
+    then
+    echo $i
+    else
      
 }
 status_check()
