@@ -1,7 +1,7 @@
 #!/bin/bash/
 
 commerce(){
-    ssh $2 "su -wasadm -c 'ps -ef | grep java ' "
+    ssh $2 "su -wasadm -c 'ps -ef | grep java | grep -v grep | xargs' "
 }
 
 
