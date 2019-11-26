@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 
 stat()
 {
@@ -11,31 +11,31 @@ fi
 }
 
 
-commerce(){
+commerce() {
     ssh $2 "su - wasadm -c 'ps -ef | grep java | grep -v grep |xargs kill -9'"
     stat $? 
     ssh $2 "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/Lowes7OnlineA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start; service jvma3_was.init'"
 }
 
-sc(){
+sc() {
     ssh $2 "su -wasadm -c 'ps -ef | grep java | grep -v grep | xargs kill -9' "
     stat $? 
     ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
 }
 
-pricing(){
+pricing() {
     ssh $2 "su -wasadm -c 'ps -ef | grep java | grep -v grep | xargs kill -9' "
     stat $? 
     ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
 }
 
-mylowes(){
+mylowes() {
     ssh $2 "su - wasadm -c 'ps -ef | grep java | grep -v grep | xargs kill -9' "
     stat $? 
     ssh $2 "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/MyLowesA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
 }
 
-mow(){
+mow() {
     ssh $2 "su - wasadm -c 'ps -ef | grep java | grep -v grep | xargs kill -9' "
     stat $? 
     ssh $2 "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesA*/bin/startNode.sh; service jvmd1_was.init start; service jvmd2_was.init start'"
