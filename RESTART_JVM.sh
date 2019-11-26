@@ -29,3 +29,4 @@ case $1 in
 commerce)
 commerce
 ;;
+SC
