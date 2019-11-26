@@ -1,5 +1,5 @@
 #!/bin/bash
-server=$server
+server=$2
 echo $server
 stat()
 {
