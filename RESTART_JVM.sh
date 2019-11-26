@@ -30,7 +30,7 @@ pricing() {
     ssh $server "su -wasadm -c 'pkill -f java'"
     stat $? 
     ssh $server "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
-    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedBB*/bin/startNode.sh
+    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedB*/bin/startNode.sh
 }
 
 mylowes() {
