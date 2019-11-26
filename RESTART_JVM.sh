@@ -1,5 +1,6 @@
 #!/bin/bash
 server=$2
+
 stat()
 {
 if [ "$1" -ne 0 ]; then
