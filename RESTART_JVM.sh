@@ -1,5 +1,5 @@
 #!/bin/bash
-server=$2
+server=$server
 echo $server
 stat()
 {
@@ -19,28 +19,28 @@ commerce() {
 }
 
 sc() {
-    ssh $2 "su -wasadm -c 'pkill -f java'"
+    ssh $server "su -wasadm -c 'pkill -f java'"
     stat $? 
     ssh $server "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
 }
 
 pricing() {
-    ssh $2 "su -wasadm -c 'pkill -f java'"
+    ssh $server "su -wasadm -c 'pkill -f java'"
     stat $? 
-    ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
+    ssh $server "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
 }
 
 mylowes() {
-    ssh $2 "su - wasadm -c 'pkill -f java'"
+    ssh $server "su - wasadm -c 'pkill -f java'"
     stat $? 
-    ssh $2 "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/MyLowesA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
+    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/MyLowesA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
 }
 
 mow() {
-    ssh $2 "su - wasadm -c 'pkill -f java'"
+    ssh $server "su - wasadm -c 'pkill -f java'"
     stat $? 
-    ssh $2 "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesA*/bin/startNode.sh; service jvmd1_was.init start; service jvmd2_was.init start'"
-    ssh $2 "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/MobileWebA*/bin/startNode.sh; service jvmc1_was.init start; service jvmc2_was.init start'"
+    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesA*/bin/startNode.sh; service jvmd1_was.init start; service jvmd2_was.init start'"
+    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/MobileWebA*/bin/startNode.sh; service jvmc1_was.init start; service jvmc2_was.init start'"
 }
 
 
