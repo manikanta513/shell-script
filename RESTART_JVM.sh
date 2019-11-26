@@ -45,7 +45,8 @@ mow() {
     stat $? 
     ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
     ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/MobileWebA*/bin/startNode.sh; service jvmb1_was.init start; service jvmb2_was.init start'"
-    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesB*/bin/startNode.sh
+    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesB*/bin/startNode.sh'"
+    
 }
 
 
