@@ -1,7 +1,7 @@
 #!/bin/bash/
 
 stat(){
-  if [ ]
+  if [ $1 -ne 0]
 
 }
 
