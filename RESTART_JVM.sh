@@ -1,7 +1,7 @@
 #!/bin/bash/
 
 commerce(){
-    ssh $2 
+    ssh $2 "su -wasadm -c "
 }
 
 
