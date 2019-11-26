@@ -13,7 +13,7 @@ fi
 
 
 commerce() {
-    ssh $server "su - wasadm -c 'ps -ef | grep java | grep -v grep | awk '{print $2}'  | xargs kill -9'"
+    ssh $server "su - wasadm -c `ps -ef | grep java | grep -v grep | awk '{print $2}' | xargs kill -9`"
     stat $? 
     ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/Lowes7OnlineA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start; service jvma3_was.init'"
 }
