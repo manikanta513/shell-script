@@ -4,7 +4,6 @@ stat()
 {
 if [ "$1" -ne 0 ]; then
 echo -e "\e[31mnot successfull\e[0m"
-echo -n " please refer the log file for more /tmp/stack.log"
 exit 2
 else
 echo -e  "\e[32msuccessfull\e[0m"
@@ -15,6 +14,7 @@ fi
 commerce(){
     ssh $2 "su -wasadm -c 'ps -ef | grep java | grep -v grep | awk -F' ' '{print $2}' |xargs kill -9' "
     stat $?
+    
 }
 
 
