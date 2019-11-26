@@ -1,8 +1,8 @@
 #!/bin/bash/
 
 stat(){
-  if [ $1 -ne 0 ]; then
-  
+  if [ "$1" -ne 0 ]; then
+
 
 }
 
