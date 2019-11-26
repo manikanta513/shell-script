@@ -1,6 +1,9 @@
 #!/bin/bash/
 
-stat()
+stat(){
+  if [ ]
+
+}
 
 
 
