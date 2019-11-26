@@ -32,3 +32,6 @@ commerce
 sc)
 sc
 ;;
+pricing)
+pricing
+
