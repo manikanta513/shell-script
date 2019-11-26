@@ -19,7 +19,7 @@ commerce() {
 }
 
 sc() {
-    ssh $2 "su -wasadm -c 'ps -ef | grep java | grep -v grep | xargs kill -9' "
+    ssh $2 "su -wasadm -c 'pkill -f java' "
     stat $? 
     ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/SCSharedA*/bin/startNode.sh; service jvma1_was.init start; service jvma2_was.init start'"
 }
