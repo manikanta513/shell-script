@@ -13,8 +13,8 @@ fi
 
 commerce(){
     ssh $2 "su -wasadm -c 'ps -ef | grep java | grep -v grep | awk -F' ' '{print $2}' |xargs kill -9' "
-    stat $?startNode.sh; service 
-    ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/Lowes7OnlineA*/bin/startNode.sh; service '"
+    stat $?startNode.sh; service jvma1_was.init start; service 
+    ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/Lowes7OnlineA*/bin/startNode.sh; service jvma1_was.init start; service '"
 }
 
 
