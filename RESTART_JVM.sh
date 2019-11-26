@@ -39,7 +39,7 @@ mylowes() {
 mow() {
     ssh $server "su - wasadm -c 'pkill -f java'"
     stat $? 
-    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesA*/bin/startNode.sh; service jvmd1_was.init start; service jvmd2_was.init start'"
+    ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/IServicesA*/bin/startNode.sh; service jvma1_was.init start; service jvmd2_was.init start'"
     ssh $server "su - wasadm -c '/WCS/WebSphere70/AppServer/profiles/MobileWebA*/bin/startNode.sh; service jvmc1_was.init start; service jvmc2_was.init start'"
 }
 
