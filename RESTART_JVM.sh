@@ -13,8 +13,8 @@ fi
 
 commerce(){
     ssh $2 "su -wasadm -c 'ps -ef | grep java | grep -v grep | awk -F' ' '{print $2}' |xargs kill -9' "
-    stat $?
-    ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/Lowes7OnlineA*/bin/'"
+    stat $?startNo
+    ssh $2 "su -wasadm -c '/WCS/WebSphere70/AppServer/profiles/Lowes7OnlineA*/bin/startNo'"
 }
 
 
