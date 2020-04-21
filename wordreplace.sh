@@ -1,6 +1,5 @@
 #!/bin/bash
-
-for i in `cat /usr/local/etc/group/commerce_restarts` ; do
+for i in `cat /usr/local/etc/group/cpi` ; do
 
         h=`echo -n $i | tail -c 2`
         echo $h
