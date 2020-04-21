@@ -4,6 +4,6 @@ for i in `cat /usr/local/etc/group/cpi` ; do
         h=`echo -n $i | tail -c 2`
         echo $i
         echo $h
-        ssh $i "sed -i 's/i01/i$i /WCS/WebSphere70/AppServer/profiles/Lowes7OnlineA$h/bin/stopNode.sh"
+        ssh $i "sed -i 's/i01/i$i/g / "
         echo "++++++++++++++++++++Done for $i ++++++++++++++++++ "
 done
